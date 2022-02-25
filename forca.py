@@ -29,7 +29,6 @@ def jogar():
 
         print(letras_corretas)
 
-
     if(acertou):
         imprime_mensagem_venceu(palavra_secreta)
 
@@ -41,7 +40,6 @@ def mensagem_inicio():
     print('***************************')
     print('Bem Vindo ao jogo de Forca!')
     print('***************************')
-
 
 def carrega_palavra_secreta():
     arquivo = open("palavras.txt", "r")
@@ -70,7 +68,6 @@ def marca_chute_correto(chute, letras_corretas, palavra_secreta):
         if (chute == letra):
             letras_corretas[posicao] = letra
         posicao += 1
-
 
 def desenha_forca(erros):
     print("  _______     ")
@@ -121,7 +118,6 @@ def desenha_forca(erros):
     print(" |            ")
     print("_|___         ")
     print()
-
 
 def imprime_mensagem_venceu(palavra_secreta):
     print("Você Ganhou!!!\n")
