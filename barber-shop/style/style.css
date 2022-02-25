@@ -1,0 +1,284 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #BBBBBB; /* cor de fundo do cabeçalho */
+	padding: 25px 0; /* padding é o espaçamento interno */
+}
+.caixa {
+	position: relative;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 32px;
+	text-decoration: none; /* tira a decoração padrão do html, por exemplo o sublinhado de links */
+
+}
+
+nav a:hover {  /* css para alterar comportamento quando o mouse estiver em cima do nav a */
+	color: #C78C19;
+	text-decoration: underline;
+
+}
+
+.produtos {
+	align-items: center;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;	
+	margin: 0 1.5%;
+	padding: 50px 20px;
+	box-sizing: border-box;
+	border: 3px solid #000000;
+	border-radius: 25px;  ¨/* gera bordas arredondadas com o raio de um circulo imaginario nas bordas */
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:hover h2 {
+	font-size: 40px;
+}
+
+.produtos li:active {
+	border-color: #088C19;
+}
+
+.produtos h2{
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
+
+footer {
+	text-align: center;
+	background: url("../assets/bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 12px;
+	margin: 20px 0 0;
+}
+
+main {
+	
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+}
+
+table {
+	margin: 20px 0 40px;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+
+/* css da pagina inicial */
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 30px 0 1em;
+	clear: left;
+}
+
+.titulo-principal:first-letter {
+	font-weight: bold;
+}
+
+/* exemplo de como selecionar o css antes ou depois de um objeto
+.titulo-principal:before {
+	content: "PAU";
+}
+
+.titulo-principal:after {
+	content: "PIROCA";
+}
+*/
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 34px 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+	/*box-shadow: inset 0 0 30px #FF0000; teste de box shadow */
+}
+
+.utensilios {
+	width: 150px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 2;
+}
+
+.itens:first-child {  /*last child, nth child e etc pra selecionar um pseudo elemento da lista*/
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "★";
+}
+
+.imagembeneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagembeneficios:hover {
+	opacity: 0.3;
+}
+
+.mapa {
+	padding: 3em 0;
+	text-align: center;
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+	width: 1600px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+}
+
+.video {
+	margin: 3em auto;
+	width: 650px;
+}
+
+
+/*mudar a exibição para dispositivos com resolução diferente,  como celular por exemplo*/
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+	h1 {
+		text-align: center;
+	}
+	nav {
+		position: static;
+	}
+	.lista-beneficios, .imagembeneficios {
+		width: 100%;
+	}
+}
